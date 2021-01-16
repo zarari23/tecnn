@@ -1,0 +1,874 @@
+<Check@MDCheckbox>:
+    group: 'group'
+    size_hint: None, None
+    size: dp(48), dp(48)
+    # selected_color: 1, 1, 0, 1 #1, 1, .35, 1
+
+<Checklingua@MDCheckbox>:
+    group: 'lingua'
+    size_hint: None, None
+    size: dp(48), dp(48)
+
+Screen:
+
+    NavigationLayout:
+
+        ScreenManager:
+            id: screenmanager
+
+            Screen:
+                name: "home"
+
+                MDBottomNavigation:
+
+                    MDBottomNavigationItem:
+                        name: "screen 1"
+                        icon: "gas-station"
+                        # text: "Combustibili fossili"
+                        text: "Fossili"
+
+                        Screen:
+                            name: "hm"
+
+                            BoxLayout:
+                                orientation: "vertical"
+
+                                MDToolbar:
+                                    id: toolhome
+                                    # title: "Combustibili Fossili"
+                                    left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
+                                    # right_action_items: [["magnify", lambda x: app.cerca()]]
+
+                                BoxLayout:
+                                    orientation: "vertical"
+
+                                    ScrollView:
+
+                                        MDList:
+                                            spacing: "20dp"
+                                            padding: "20dp"
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "460dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/petrolio.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "I combustibili fossili"
+                                                    id: combfoss
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 1"
+                                                    theme_text_color: "Secondary"
+                                                    id: combfosstext
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "340dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/effettoserra.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 2"
+                                                    id: effettoserra
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 2"
+                                                    theme_text_color: "Secondary"
+                                                    id: effettoserratext
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            
+
+
+            # Screen:
+            #     name: "ricerca"
+
+                    # MDBottomNavigationItem:
+                    #     name: "screen 2"
+                    #     icon: "chart-box"
+                    #     text: "Efficienza energetica"
+
+                    #     Screen:
+
+                    #         BoxLayout:
+                    #             orientation: "vertical"
+
+                    #             MDToolbar:
+                    #                 title: "Efficienza Energetica"
+                    #                 left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
+                    #                 # right_action_items: [["magnify", lambda x: app.cerca()]]
+
+                    #             BoxLayout:
+                    #                 orientation: "vertical"
+
+                    MDBottomNavigationItem:
+                        name: "screen 3"
+                        icon: "wind-turbine"
+                        # text: "Fonti alternative"
+                        text: "Alternative"
+
+                        Screen:
+
+                            BoxLayout:
+                                orientation: "vertical"
+
+                                MDToolbar:
+                                    id: fontialternativetoolb
+                                    # title: "Fonti Alternative"
+                                    left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
+                                    # right_action_items: [["magnify", lambda x: app.cerca()]]
+
+                                BoxLayout:
+                                    orientation: "vertical"
+
+                                    ScrollView:
+
+                                        MDList:
+                                            spacing: "20dp"
+                                            padding: "20dp"
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "500dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/ridurreemissioni.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 3"
+                                                    id: ridurreleemissioni
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 3"
+                                                    theme_text_color: "Secondary"
+                                                    id: ridurreleemissionitext
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "460dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/effenr.png"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 4"
+                                                    id: efficienzaenergetica
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 4"
+                                                    theme_text_color: "Secondary"
+                                                    id: efficienzaenergeticatext
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "410dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/biomasse.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 5"
+                                                    id: biomasse
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 5"
+                                                    theme_text_color: "Secondary"
+                                                    id: biomassetext
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "335dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/centrale idroeletrica.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 6"
+                                                    id: centraleidroelettrica
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 6"
+                                                    id: centraleidroelettricatext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "410dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/turbine eoliche mare del nord.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 7"
+                                                    id: energiaeolica
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 7"
+                                                    id: energiaeolicatext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "390dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/campo pannelli fotovoltaici.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 8"
+                                                    id: fotovoltaico
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 8"
+                                                    id: fotovoltaicotext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "565dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/centrale nucleare.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 9"
+                                                    id: nucleare
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 9"
+                                                    id: nuclearetext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            
+
+                    MDBottomNavigationItem:
+                        name: "screen 4"
+                        icon: "gas-cylinder"
+                        text: "Metano"
+
+                        Screen:
+
+                            BoxLayout:
+                                orientation: "vertical"
+
+                                MDToolbar:
+                                    title: "Metano"
+                                    left_action_items: [["menu", lambda x: nav_drawer.set_state()]]
+                                    # right_action_items: [["magnify", lambda x: app.cerca()]]
+
+                                BoxLayout:
+                                    orientation: "vertical"
+
+                                    ScrollView:
+
+                                        MDList:
+                                            spacing: "20dp"
+                                            padding: "20dp"
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "320dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/metano.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 10"
+                                                    id: metano
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 10"
+                                                    id: metanotext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "335dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/usimetano.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 10"
+                                                    id: usimetano
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 10"
+                                                    id: usimetanotext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "375dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/gasdotto.jpg"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 10"
+                                                    id: trasporto
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 10"
+                                                    id: trasportotext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                            
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "475dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/mappagasdottieuropa.png"
+                                                    allow_stretch: True
+                                                    keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 10"
+                                                    id: gasdottiprinc
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 10"
+                                                    id: gasdottiprinctext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+                                            MDCard:
+                                                orientation: "vertical"
+                                                padding: "12dp", "12dp"
+                                                spacing: 8
+                                                size_hint: 1, None
+                                                size: "0", "315dp"
+                                                elevation: 3
+                                                radius: 7, 7, 7, 7
+
+                                                Image:
+                                                    source: "./immagini/metanonelmondo.png"
+                                                    # allow_stretch: True
+                                                    # keep_ratio: False
+                                                    # size_hint_y: None
+                                                    # height: self.texture_size[1]
+
+                                                MDLabel:
+                                                    # text: "Articolo 10"
+                                                    id: riserve
+                                                    # theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+                                                    font_style: "H5"
+
+                                                MDSeparator:
+                                                    height: "1dp"
+
+                                                MDLabel:
+                                                    # text: "testo dell'articolo 10"
+                                                    id: riservetext
+                                                    theme_text_color: "Secondary"
+                                                    size_hint_y: None
+                                                    height: self.texture_size[1]
+
+            
+            Screen:
+                name: "settt"
+
+                BoxLayout:
+                    orientation: "vertical"
+
+                    MDToolbar:
+                        title: "Impostazioni"
+                        left_action_items: [["chevron-down", lambda x: app.home()]]
+
+                    MDList:
+                        padding: 8
+
+                        # OneLineAvatarListItem:
+                        #     text: "Lingua"
+                        #     divider: None
+                        #     on_release: app.lingua()
+
+                        #     IconLeftWidget:
+                        #         icon: "earth"
+
+                        OneLineAvatarListItem:
+                            text: "Tema"
+                            divider: None
+                            on_release: app.tema()
+
+                            IconLeftWidget:
+                                icon: "brightness-6"
+
+                    Widget:
+
+            Screen:
+                name: "tema"
+
+                BoxLayout:
+                    orientation: "vertical"
+
+                    MDToolbar:
+                        title: "Tema"
+                        left_action_items: [["chevron-left", lambda x: app.st()]]
+
+                    MDList:
+
+                        OneLineAvatarIconListItem:
+                            text: "Chiaro"
+                            divider: None
+                            on_size:
+                                self.ids._right_container.width = container.width
+                                self.ids._right_container.x = container.width
+
+                            IconLeftWidget:
+                                icon: "brightness-6"
+
+                            Container:
+                                id: container
+
+                                Check:
+                                    # active: True
+                                    id: chiaro
+                                    on_active: app.temachiaro()
+
+                        OneLineAvatarIconListItem:
+                            text: "Scuro"
+                            divider: None
+                            on_size:
+                                self.ids._right_container.width = container.width
+                                self.ids._right_container.x = container.width
+
+                            IconLeftWidget:
+                                icon: "brightness-4"
+
+                            Container:
+                                id: container
+
+                                Check:
+                                    id: scuro
+                                    on_active: app.temascuro()
+
+                    Widget:
+
+            Screen:
+                name: "lingua"
+
+                BoxLayout:
+                    orientation: "vertical"
+
+                    MDToolbar:
+                        title: "Lingua"
+                        left_action_items: [["chevron-left", lambda x: app.st()]]
+
+                    MDList:
+
+                        OneLineAvatarIconListItem:
+                            text: "Italiano"
+                            divider: None
+                            on_size:
+                                self.ids._right_container.width = container.width
+                                self.ids._right_container.x = container.width
+
+                            IconLeftWidget:
+                                icon: "translate"
+
+                            Container:
+                                id: container
+
+                                Checklingua:
+                                    id: ita
+                                    on_active: app.setita()
+
+                        OneLineAvatarIconListItem:
+                            text: "English"
+                            divider: None
+                            on_size:
+                                self.ids._right_container.width = container.width
+                                self.ids._right_container.x = container.width
+
+                            IconLeftWidget:
+                                icon: "translate"
+
+                            Container:
+                                id: container
+
+                                Checklingua:
+                                    id: en
+                                    on_active: app.seten()
+
+                    Widget:
+
+            Screen:
+                name: "fonti"
+
+                BoxLayout:
+                    orientation: "vertical"
+
+                    MDToolbar:
+                        title: "Fonti"
+                        left_action_items: [["chevron-down", lambda x: app.home()]]
+
+                    MDLabel:
+                        text: "SITOGRAFIA"
+                        font_style: "Button"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding: 10, 10
+                        theme_text_color: "Secondary"
+
+                    OneLineAvatarListItem:
+                        text: "Wikipedia - Biomassa"
+                        divider: None
+                        on_release: app.wiki_biomasse()
+
+                        IconLeftWidget:
+                            icon: "wikipedia"
+
+                    OneLineAvatarListItem:
+                        text: "Wikipedia - Centrale idroelettrica"
+                        divider: None
+                        on_release: app.wiki_centrale_idroelettrica()
+
+                        IconLeftWidget:
+                            icon: "wikipedia"
+
+                    OneLineAvatarListItem:
+                        text: "Wikipedia - Energia eolica"
+                        divider: None
+                        on_release: app.wiki_energia_eolica()
+
+                        IconLeftWidget:
+                            icon: "wikipedia"
+
+                    OneLineAvatarListItem:
+                        text: "Wikipedia - Metano"
+                        divider: None
+                        on_release: app.wiki_metano()
+
+                        IconLeftWidget:
+                            icon: "wikipedia"
+
+                    OneLineAvatarListItem:
+                        text: "Wikipedia - Giacimenti di gas naturale"
+                        divider: None
+                        on_release: app.wiki_giacimenti_gas_naturale()
+
+                        IconLeftWidget:
+                            icon: "wikipedia"
+
+                    # OneLineAvatarListItem:
+                    #     text: "Sito generico [nessuna funzione assegnata]"
+                    #     divider: None
+
+                    #     IconLeftWidget:
+                    #         icon: "web"
+
+                    MDLabel:
+                        text: "BIBLIOGRAFIA"
+                        font_style: "Button"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding: 10, 10
+                        theme_text_color: "Secondary"
+
+                    OneLineAvatarListItem:
+                        text: "Tecnologia con metodo"
+                        divider: None
+                        on_release: app.tecnologia_con_metodo()
+
+                        IconLeftWidget:
+                            icon: "book-outline"
+
+                    Widget:
+
+           
+
+        MDNavigationDrawer:
+            id: nav_drawer
+
+            BoxLayout:
+                orientation: "vertical"
+                padding: "8dp"
+                spacing: "8dp"
+
+                AnchorLayout:
+                    anchor_x: "left"
+                    size_hint_y: None
+                    height: avatar.height
+
+                    Image:
+                        id: avatar
+                        size_hint: None, None
+                        size: "112dp", "112dp"
+                        source: "./immagineprofilo.png"
+
+                MDLabel:
+                    text: "APP TECNOLOGIA V 1.0"
+                    font_style: "Button"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "3C - gruppo 3"
+                    font_style: "Caption"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDList:
+
+                    OneLineAvatarListItem:
+                        text: "Impostazioni"
+                        # divider: None
+                        on_release: app.sett()
+
+                        IconLeftWidget:
+                            icon: "settings-outline"
+
+                    OneLineAvatarListItem:
+                        text: "Informazioni App"
+                        divider: None
+                        on_release: app.infapp()
+
+                        IconLeftWidget:
+                            icon: "information-outline"
+
+                    OneLineAvatarListItem:
+                        text: "Fonti"
+                        divider: None
+                        on_release: app.fonti()
+
+                        IconLeftWidget:
+                            icon: "book-outline"
+
+                Widget:
